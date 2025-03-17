@@ -25,3 +25,4 @@ Hardware stratospheric balloon localization module with server.
 ```
 
 # Appearance
+![raspberryPi](images/raspberryPi.jpg)
