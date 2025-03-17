@@ -1,0 +1,13 @@
+[Unit]
+Description=GPS Service
+After=network.target
+
+[Service]
+User=balon
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/python /home/balon/gps.py
+Restart=always
+TimeoutStopSec=7s
+
+[Install]
+WantedBy=multi-user.target
