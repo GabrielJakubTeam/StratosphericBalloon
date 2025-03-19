@@ -12,6 +12,15 @@ def isfloat(num) -> bool:
         return False
 
 
+# function checks data position
+def data_index(data: list[str]) -> int:
+    for index, element in enumerate(data):
+        if ',' in element:
+            return index
+    else:
+        return 100
+
+
 # function extracts longitude and latitude from data received from GPS
 def decode_gps(gps: str) -> tuple[float, float, str, str]:
     gps_list: list[str] = gps.split(',')
@@ -78,7 +87,8 @@ if __name__ == '__main__':
                 try:
                     response3 = send_at_command(command='AT+CGNSINF')
                     prepare_data = response3.split()
-                    latitude, longitude, latitudeStr, longitudeStr = decode_gps(gps=prepare_data[2])
+                    index = data_index(prepare_data)
+                    latitude, longitude, latitudeStr, longitudeStr = decode_gps(gps=prepare_data[index])
                     send_coordinates_serwer(latitude=latitudeStr, longitude=longitudeStr)
                     time.sleep(10)
                 except Exception as error:
