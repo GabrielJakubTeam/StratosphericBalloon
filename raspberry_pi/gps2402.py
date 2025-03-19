@@ -78,7 +78,7 @@ if __name__ == '__main__':
                 try:
                     response3 = send_at_command(command='AT+CGNSINF')
                     prepare_data = response3.split()
-                    latitude, longitude, latitudeStr, longitudeStr = decode_gps(gps=prepare_data[1])
+                    latitude, longitude, latitudeStr, longitudeStr = decode_gps(gps=prepare_data[2])
                     send_coordinates_serwer(latitude=latitudeStr, longitude=longitudeStr)
                     time.sleep(10)
                 except Exception as error:
