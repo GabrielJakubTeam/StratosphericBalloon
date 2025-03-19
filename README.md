@@ -1,14 +1,32 @@
 # StratosphericBalloon
 Hardware stratospheric balloon localization module with server. 
 
-# Hardware
+## Table of Contents
+* [General info](#general-info)
+* [Technologies Used](#technologies-used)
+* [Hardware](#hardware)
+* [Repository Structure](#repository-structure)
+* [Appearance](#appearance)
+* [Project Status](#project-status)
+
+
+## General Info
+Project for a stratospheric balloon locator module that allows tracking its position from a website
+
+## Technologies Used
+* Python version: 3.12
+* Php
+* Linux
+
+
+## Hardware
 - SIM7000E LTE GPS HAT - Waveshare 14865 
 - UPS HAT - Waveshare 18306
 - SIM card
 - Raspbery Pi 4B
 - Server
 
-# Repository structure
+## Repository Structure
 ```
 .
 ├── LICENSE
@@ -24,5 +42,8 @@ Hardware stratospheric balloon localization module with server.
     └── README.md       # more information about server side software
 ```
 
-# Appearance
+## Appearance
 ![raspberryPi](images/raspberryPi.jpg)
+
+## Project Status
+Project is in a phase of continuous development, the planned completion date is mid-May this year
