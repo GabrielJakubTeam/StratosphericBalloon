@@ -1,4 +1,4 @@
-Device side consists of two key components. First, Python script to send location coordinates run by [systemd](https://en.wikipedia.org/wiki/Systemd) during start-up. Second, [Wvdial](https://wiki.archlinux.org/title/Wvdial),  also run by systemd, to establish GSM connection.
+Device side consists of two key components. Firstly, a python script to send location coordinates triggered by [systemd](https://en.wikipedia.org/wiki/Systemd) during start-up. Secondly, a network connection with NetworkManager and auto-reconnect attribute, also triggered by systemd, to establish GSM connection.
 
 # Setup
 ~~~ bash
@@ -9,8 +9,6 @@ git clone https://github.com/GabrielJakubTeam/StratosphericBalloon.git
 sudo cp StratosphericBalloon/raspberry_pi/*.service /etc/systemd/system/
 cp StratosphericBalloon/raspberry_pi/gps2402.py ~/
 
-# reload and start services
-sudo daemon-reload
-sudo systemctl start baloon_gps gprs_connection
-sudo systemctl enable baloon_gps gprs_connection
+sudo nmcli c add con-name "mycon" type gsm ifname "*" apn "internet"
+sudo nmcli c mod mycon connection.autoconnect yes
 ~~~
