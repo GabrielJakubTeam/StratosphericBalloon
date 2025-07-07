@@ -1,23 +1,21 @@
 <?php
-    // downloading data from the database
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: GET");
     header("Access-Control-Allow-Headers: Content-Type, Authorization");
     header("Content-Type: application/json");
 
     include 'config.php';
-    $SECRET_API_KEY = "Api_key";
 
-    // api authorization
+    $SECRET_API_KEY = "API_KEY";
+
     $headers = getallheaders();
     if (!isset($headers["Authorization"]) || $headers["Authorization"] !== "Bearer " . $SECRET_API_KEY) {
         http_response_code(403);
-        echo json_encode(["error" => "Unauthorized access"]);
-        exit();
+        echo json_encode(["error" => "Unauthorized access get_data_php"]);
+	exit();
     }
 
-    // load data from database to website
-    $sql = "SELECT * FROM balloontable ORDER BY id DESC LIMIT 5";
+    $sql = "SELECT * FROM balloondata ORDER BY id DESC LIMIT 7";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

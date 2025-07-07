@@ -16,6 +16,7 @@ Project for a stratospheric balloon locator module that allows tracking its posi
 ## Technologies Used
 * Python version: 3.12
 * Php
+* JavsScript
 * Linux
 
 
@@ -43,7 +44,20 @@ Project for a stratospheric balloon locator module that allows tracking its posi
 ```
 
 ## Appearance
+Location module
 ![raspberryPi](images/raspberryPi.jpg)
+Balloon load
+![zdjecie_srodka](images/zdjecie_srodka.jpg)
+Preparations before take-off
+![pompowanie_balona](images/pompowanie_balona.jpg)
+Starting moment
+![balon_w_powietrzu](images/balon_w_powietrzu.jpg)
+Camera view 30 km above ground
+![kamera_w_kosmosie](images/kamera_w_kosmosie.jpg)
+Landing site
+![miejsce_ladowania](images/miejsce_ladowania.jpg)
+Landing place on the map
+![pozycja_ladowania](images/pozycja_ladowania.jpg)
 
 ## Project Status
-Project is in a phase of continuous development, the planned completion date is mid-May this year
+The project was completed, and the balloon launch itself was successful. According to the plan, it rose to a height of about 30 km above the ground, then fell by parachute. After all, thanks to the GPS module, it was possible to find it, the balloon itself covered a distance of about 100 km and flew for 3 hours.
