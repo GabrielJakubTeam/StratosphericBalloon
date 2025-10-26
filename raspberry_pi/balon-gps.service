@@ -4,10 +4,9 @@ After=network.target
 
 [Service]
 User=balon
-ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/python /home/balon/gps.py
+ExecStart=/usr/bin/python /home/balon/gps2402.py
 Restart=always
-TimeoutStopSec=7s
+TimeoutStopSec=10s
 
 [Install]
 WantedBy=multi-user.target

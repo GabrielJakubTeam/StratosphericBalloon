@@ -32,15 +32,16 @@ Project for a stratospheric balloon locator module that allows tracking its posi
 .
 ├── LICENSE
 ├── raspberry_pi
+│   ├── balon-gps.service # service file to manage localization
 │   ├── gps2402.py
-│   └── README.md       # more information about device side software
-├── README.md           # you are here ;)
+│   └── README.md         # more information about device side software
+├── README.md             # you are here ;)
 └── server
     ├── api.php
     ├── config.php
     ├── get_data.php
     ├── index.php
-    └── README.md       # more information about server side software
+    └── README.md         # more information about server side software
 ```
 
 ## Appearance
